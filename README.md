@@ -8,3 +8,7 @@
     # Third step (Open the terminal inside the container):
     We have to run this command $ docker exec -it [CONTAINER ID] /bin/bash
 
+@To run the watcher for convert sass files to the public/sass-style.css type this command 
+    -> sass --watch sass/main.scss public/sass-style.css
+
+    
