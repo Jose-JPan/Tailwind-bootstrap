@@ -1,14 +1,18 @@
-@This steps are for to build an NODE.js docker image:
-    # First step (Create the image):
-    We have to run this command $ docker build -t imgfoodchain .
+@This steps are for to build a NODE.js DOCKER image (Before Deploy to Production):
+    # First step (Create the image) we have to run this command:
+    -> docker build -t imgfoodchain .
 
-    # Second step (Run the image as a Container):
-    We have to run this command $ docker run -d -p 3000:3000 --name appfoodchain imgfoodchain
+    # Second step (Run the image as a Container) we have to run this command:
+    -> docker run -d -p 3000:3000 --name appfoodchain imgfoodchain
 
-    # Third step (Open the terminal inside the container):
-    We have to run this command $ docker exec -it [CONTAINER ID] /bin/bash
+    # Third step (Open the terminal inside the container) we have to run this command:
+    -> docker exec -it [CONTAINER ID] /bin/bash
 
-@To run the watcher for convert sass files to the public/sass-style.css type this command 
-    -> sass --watch sass/main.scss public/sass-style.css
 
-    
+
+@To run the watcher for convert sass files from sass/main.scss to the public/sass-style.css type this command:
+    -> npm run sass:watch
+
+@To run the server nodemon
+    -> nodemon
+

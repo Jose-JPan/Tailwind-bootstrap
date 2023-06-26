@@ -1,5 +1,20 @@
 const express = require ('express')
-const app = express()
+const connectLiveReload = require("connect-livereload");
 
-app.get ('/', (req, res) => res.send('Hello FoodChain'))
+const app = express()
+app.use(connectLiveReload());
+// const path = require('path');
+
+const livereload = require("livereload");
+var liveReloadServer = livereload.createServer({extraExts:'ejs'});
+liveReloadServer.watch([__dirname+'/views',__dirname+'/public']);
+
+
+
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
+
+app.get ('/', (req, res) => res.render("land"));
+app.get ('/merda', (req, res) => res.render("merda"));
+
 app.listen (3000, () => console.log('server ready'))
