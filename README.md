@@ -13,6 +13,9 @@
 @To run the watcher for convert sass files from sass/main.scss to the public/sass-style.css type this command:
     -> npm run sass:watch
 
+@To run the watcher for create classes tailwind into the public/tailwind-style.css type this command:
+    -> npm run tailwind:watch
+
 @To run the server nodemon
     -> nodemon
 

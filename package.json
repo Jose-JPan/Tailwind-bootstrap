@@ -4,7 +4,8 @@
   "description": "We have to run this command $ docker build -t imgfoodchain .",
   "main": "app.js",
   "scripts": {
-    "sass:watch": "sass --watch sass/main.scss public/sass-style.css"
+    "sass:watch": "sass --watch sass/main.scss public/sass-style.css",
+    "tailwind:watch": "tailwindcss -i ./tailwind/input.css -o ./public/tailwind-style.css --watch"
   },
   "nodemonConfig":{
     "ext":"*",
