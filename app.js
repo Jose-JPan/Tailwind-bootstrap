@@ -24,4 +24,4 @@ var indexRoutes = require("./routes/index");
 
 app.use("/", indexRoutes);
 
-app.listen (3000, () => console.log('server ready'))
+app.listen (3000, () => console.log('server ready'));
